@@ -198,13 +198,13 @@ function EaseOutBounce(x)
 end
 
 function EaseInBounce(x)
-    return 1 - ease_out_bounce(1 - x)
+    return 1 - EaseOutBounce(1 - x)
 end
 
 function EaseInOutBounce(x)
     if x < 0.5 then
-        return (1 - ease_out_bounce(1 - 2 * x)) / 2
+        return (1 - EaseOutBounce(1 - 2 * x)) / 2
     else
-        return (1 + ease_out_bounce(2 * x - 1)) / 2
+        return (1 + EaseOutBounce(2 * x - 1)) / 2
     end
 end
