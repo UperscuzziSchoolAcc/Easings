@@ -1,3 +1,7 @@
+# Easings for V
+
+#### Functions:
+
 ```c
 double easeInSine(double x) 
 ```
