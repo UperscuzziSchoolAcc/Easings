@@ -1,24 +1,24 @@
-function ease_in_sine(x)
+function EaseInSine(x)
     return 1 - cos((x * pi) / 2)
 end
 
-function ease_out_sine(x)
+function EaseOutSine(x)
     return sin((x * pi) / 2)
 end
 
-function ease_in_out_sine(x)
+function EaseInOutSine(x)
     return -(cos(pi * x) - 1) / 2
 end
 
-function ease_in_cubic(x)
+function EaseInCubic(x)
     return x * x * x
 end
 
-function ease_out_cubic(x)
+function EaseOutCubic(x)
     return 1 - pow(1 - x, 3)
 end
 
-function ease_in_out_cubic(x)
+function EaseInOutCubic(x)
     if x < 0.5 then
         return 4 * x * x * x
     else
@@ -26,15 +26,15 @@ function ease_in_out_cubic(x)
     end
 end
 
-function ease_in_quint(x)
+function EaseInQuint(x)
     return x * x * x * x
 end
 
-function ease_out_quint(x)
+function EaseOutQuint(x)
     return 1 - pow(1 - x, 5)
 end
 
-function ease_in_out_quint(x)
+function EaseInOutQuint(x)
     if x < 0.5 then
         return 16 * x * x * x * x * x
     else
@@ -42,15 +42,15 @@ function ease_in_out_quint(x)
     end
 end
 
-function ease_in_circ(x)
+function EaseInCirc(x)
     return 1 - sqrt(1 - (x * x))
 end
 
-function ease_out_circ(x)
+function EaseOutCirc(x)
     return sqrt(1 - pow(x - 1, 2))
 end
 
-function ease_in_out_circ(x)
+function EaseInOutCirc(x)
     if x < 0.5 then
         return (1 - sqrt(1 - pow(2 * x, 2))) / 2
     else
@@ -58,7 +58,7 @@ function ease_in_out_circ(x)
     end
 end
 
-function ease_in_elastic(x)
+function EaseInElastic(x)
     if x == 0 then
         return 0
     elseif x == 1 then
@@ -70,7 +70,7 @@ function ease_in_elastic(x)
     end
 end
 
-function ease_out_elastic(x)
+function EaseOutElastic(x)
     if x == 0 then
         return 0
     elseif x == 1 then
@@ -83,7 +83,7 @@ function ease_out_elastic(x)
 end
 
 
-function ease_in_out_elastic(x)
+function EaseInOutElastic(x)
     if x == 0 then
         return 0
     elseif x == 1 then
@@ -104,15 +104,15 @@ function ease_in_out_elastic(x)
     end
 end
 
-function ease_in_quad(x)
+function EaseInQuad(x)
     return x * x
 end
 
-function ease_out_quad(x)
+function EaseOutQuad(x)
     return 1 - (1 - x) * (1 - x)
 end
 
-function ease_in_out_quad(x)
+function EaseInOutQuad(x)
     if x < 0.5 then
         return 2 * x * x
     else
@@ -120,15 +120,15 @@ function ease_in_out_quad(x)
     end
 end
 
-function ease_in_quart(x)
+function EaseInQuart(x)
     return x * x * x * x
 end
 
-function ease_out_quart(x)
+function EaseOutQuart(x)
     return 1 - pow(1 - x, 4)
 end
 
-function ease_in_out_quart(x)
+function EaseInOutQuart(x)
     if x < 0.5 then
         return 8 * x * x * x * x
     else
@@ -136,7 +136,7 @@ function ease_in_out_quart(x)
     end
 end
 
-function ease_in_expo(x)
+function EaseInExpo(x)
     if x == 0 then
         return 0
     else
@@ -145,7 +145,7 @@ function ease_in_expo(x)
 end
 
 
-function ease_out_expo(x)
+function EaseOutExpo(x)
     if x == 1 then
         return 1
     else
@@ -154,7 +154,7 @@ function ease_out_expo(x)
 end
 
 
-function ease_in_out_expo(x)
+function EaseInOutExpo(x)
     if x == 0 then
         return 0
     elseif x == 1 then
@@ -166,17 +166,17 @@ function ease_in_out_expo(x)
     end
 end
 
-function ease_in_back(x)
+function EaseInBack(x)
     return 2.70158 * x * x * x - 1.70158 * x * x
 end
 
 
-function ease_out_back(x)
+function EaseOutBack(x)
     return 1 + 2.70158 * pow(x - 1, 3) + 1.70158 * pow(x - 1, 2)
 end
 
 
-function ease_in_out_back(x)
+function EaseInOutBack(x)
     if x < 0.5 then
         return (pow(2 * x, 2) * (7.189819 * x - 2.5949095)) / 2
     else
@@ -185,7 +185,7 @@ function ease_in_out_back(x)
 end
 
 
-function ease_out_bounce(x)
+function EaseOutBounce(x)
     if x < 1 / 2.75 then
         return 7.5625 * x * x
     elseif x < 2 / 2.75 then
@@ -197,11 +197,11 @@ function ease_out_bounce(x)
     end
 end
 
-function ease_in_bounce(x)
+function EaseInBounce(x)
     return 1 - ease_out_bounce(1 - x)
 end
 
-function ease_in_out_bounce(x)
+function EaseInOutBounce(x)
     if x < 0.5 then
         return (1 - ease_out_bounce(1 - 2 * x)) / 2
     else
