@@ -1,3 +1,6 @@
+# Easings for Rust
+
+#### Functions:
 
 ```rs
 pub fn ease_in_sine(x: f64) -> f64 
